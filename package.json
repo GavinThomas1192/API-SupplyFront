@@ -3,6 +3,10 @@
   "name": "startbootstrap-scrolling-nav",
   "version": "4.0.0-beta",
   "description": "A smooth scrolling navigation HTML template built with Bootstrap",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack-dev-server --inline --hot"
+  },
   "keywords": [
     "css",
     "sass",
@@ -29,7 +33,9 @@
     "bootstrap": "^4.0.0-beta",
     "jquery": "^3.2.1",
     "jquery.easing": "^1.4.1",
-    "popper.js": "^1.11.1"
+    "popper.js": "^1.11.1",
+    "superagent": "^3.6.1",
+    "webpack": "^3.6.0"
   },
   "devDependencies": {
     "browser-sync": "2.18.13",
