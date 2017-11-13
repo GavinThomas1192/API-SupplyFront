@@ -9,11 +9,11 @@ var superagent = superagent;
 
 let name = Math.random();
 let username = Math.random();
-$(document).ready(function($){
+$(document).ready(function ($) {
   let token = '';
   let allapi = '';
-  $('#signUp' ).click(function() {
-
+  $('#signUp').click(function () {
+    $('#response').append(`<h4>Please wait for Heroku!</h4>`);
     superagent.post('https://api-supply.herokuapp.com/api/signup')
       .send({
         name: `${name++}`,
@@ -32,6 +32,7 @@ $(document).ready(function($){
             allapi = res;
             console.log(allapi.body);
             allapi.body.map((api) => {
+              $('#response').innerHTML = '';
               $('#response').append(`<li>${JSON.stringify(api)}</li>`);
             });
           })
